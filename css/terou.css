@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1, p, h2, h3, h4, ul, li, div {
+  margin: 0;
+  padding: 0;
+}
+
+/* Loading bar */ 
+
+    .pace {
+        -webkit-pointer-events: none;
+        pointer-events: none;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+
+        z-index: 2000;
+        position: fixed;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 10px;
+        width: 200px;
+
+        background: #111;
+        border: 1px solid #f50057;
+        overflow: hidden;
+    }
+
+    .pace .pace-progress {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+
+        max-width: 200px;
+        position: fixed;
+        z-index: 2000;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        height: 100%;
+        width: 100%;
+        background:#f50057;
+    }
+
+    .pace.pace-inactive {
+        display: none;
+    }
+
+/* end Loading bar */
+
+/* Loading BG */
+
+    /*loading*/
+
+    #loader{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+    }
+
+    #loader::before, #loader::after{
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        z-index: 1000;
+        content: "";
+    }
+
+    #loader::before{
+        left: 0;
+        background: #111;
+    }
+
+    #loader::after{
+        left: 50%;
+        background: #111;
+    }
+
+    /*loaded*/
+
+    @keyframes LatefadeOut {
+    0%   {opacity: 1}
+    50%  {opacity: .7}
+    100% {opacity: 0}
+    }
+
+    @-webkit-keyframes LatefadeOut {
+    0%   {opacity: 1}
+    50%  {opacity: .7}
+    100% {opacity: 0}
+    }
+
+    body.pace-done #loader::before{
+        left: -50%;
+        background: #111;
+        -webkit-transition: all 0.5s ease-out;  
+                transition: all 0.5s ease-out;  
+        animation-name: LatefadeOut;
+        animation-duration: .5s;
+    }
+
+    body.pace-done #loader::after{
+        left: 100%;
+        background: #222;
+        -webkit-transition: all 0.5s ease-out;  
+                transition: all 0.5s ease-out;  
+        animation-name: LatefadeOut;
+        animation-duration: .5s;
+    }
+
+/* end Loading BG */
+
+/* Container */
+
+    /* All media */
+        body.pace-running{
+            overflow : hidden;
+        }
+
+        body.pace-done{
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #222;
+        }
+        body #container{
+            width: 100vw;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.headline{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.headline .coolIntro
+        {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 4vw;
+        }
+
+        .hotpink{
+            color: #f50057 !important;
+            display: table;
+        }
+
+        span.state{
+            color: #FFF !important;
+        }
+    /* end All media */
+
+    /* specific media fixes */
+        
+    /* end specific media fixes */
+
+/* end Container */
