@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:100,400,700');
 
 * {
   box-sizing: border-box;
@@ -69,6 +69,11 @@ h1, p, h2, h3, h4, ul, li, div {
 /* Loading BG */
 
     /*loading*/
+
+    .stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+    }
 
     #loader{
         position: fixed;
@@ -160,26 +165,156 @@ h1, p, h2, h3, h4, ul, li, div {
 
         div.headline .coolIntro
         {
+            z-index: 1;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
             font-size: 4vw;
+            text-shadow: 0px 0px 1px #f50057;
         }
 
         .hotpink{
-            color: #f50057 !important;
+            /*color: #f50057 !important;*/
+            z-index: 5;
             display: table;
+            font-family: 'Open Sans', sans-serif;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
         }
 
         span.state{
+            z-index: 5;
             color: #FFF !important;
+            font-size: 80%;
+            font-family: 'roboto', sans-serif;
+            font-weight: 100;
+            text-shadow: 0px 1px 0px rgba(200,200,200,.8), 0px 2px 0px rgba(150,150,150,.5), 0px 3px 0px rgba(100,100,100,.2);
         }
+
+        .parallax-window {
+            height: 100%;
+            background: transparent;
+        }
+
+        .parallax-window-header {
+            position: absolute;
+            top : 15vh;
+            z-index: 0;
+            min-height: 70vh;
+            width: 100%;
+            background: transparent;
+        }
+
+        .parallax-window-header::after {
+            z-index: 0;
+            content: "";
+            position: absolute;
+            top : -15vh;
+            min-height: 100vh;
+            width: 100%;
+            background: #222;
+            opacity: .5
+         }
+
+         .section{
+             width: 100%;
+             height: 100vh;
+         }
+
+         .node{
+             background: #FFF;
+             width: 3vw;
+             height: .5vw;
+             margin: .5vw;
+             -webkit-transition: width .1s ease-in;
+             transition: width .1s ease-in;
+         }
+
+         .node:hover{
+             cursor : pointer;
+             width: 4vw;
+             -webkit-transition: width .2s ease-out;
+             transition: width .2s ease-out;
+         }
+
+         .node.active{
+             background: #f50057;
+             width: 5vw;
+         }
+
+         .arrow{
+             position: absolute;
+             bottom: 6vh;
+             width: 5vh;
+             height: 5vh;
+             border-radius: 50%;
+             background: transparent;
+             border: .3vh solid #FFF;
+             right: 47.5vw;
+             left: 47.5vw;
+             margin-left: 0;
+             margin-right: 0;
+         }
+
+         .arrow::before{
+             position: absolute;
+             content: "";
+             -webkit-transform-origin: 0% 0%;
+             -moz-transform-origin: 0% 0%;
+             -o-transform-origin: 0% 0%;
+             transform-origin: 0% 0%;
+             left: 50%;
+             width: 50%;
+             height: 50%;
+             transform: rotate(45deg);
+             border: .3vh solid #FFF;
+             border-top: none;
+             border-left: none;
+             border-radius: 20%;
+         }
+
+         .arrow:hover::before{
+             top : -.1vh;
+         }
+
+         /* sub : projects */
+
+
+
+         /* end sub : projects */
+
     /* end All media */
 
     /* specific media fixes */
-        
+
+        /* Smartphones (portrait) ----------- */
+        @media only screen and (max-width : 480px) {
+            div.headline .coolIntro
+            {
+                font-size : 8vw;
+            }
+        }
+        /* Desktops and laptops ----------- */
+        @media only screen  and (min-width : 1024px) {
+            .navigator{
+                z-index: 10;
+                height: 100vh;
+                position: fixed;
+                display: flex;
+                align-content: center;
+                right: 5vw;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+        /* Large screens ----------- */
+        @media only screen  and (min-width : 1824px) {
+            
+        }
+
     /* end specific media fixes */
 
 /* end Container */
