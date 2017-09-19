@@ -176,13 +176,17 @@ h1, p, h2, h3, h4, ul, li, div {
         }
 
         .hotpink{
-            /*color: #f50057 !important;*/
+            color: #f50057 !important;
             z-index: 5;
             display: table;
             font-family: 'Open Sans', sans-serif;
             color: transparent;
             -webkit-background-clip: text;
             background-clip: text;
+        }
+
+        .darkside{
+            text-shadow: 0px 0px 10px #555
         }
 
         span.state{
@@ -220,8 +224,10 @@ h1, p, h2, h3, h4, ul, li, div {
          }
 
          .section{
+             position: relative;
              width: 100%;
              height: 100vh;
+             max-height: 100vh;
          }
 
          .node{
@@ -243,6 +249,38 @@ h1, p, h2, h3, h4, ul, li, div {
          .node.active{
              background: #f50057;
              width: 5vw;
+         }
+
+         #navigator-headline{
+            display: block;
+            position: fixed;
+            z-index: 10;
+            top: -20vh;
+            left: 10vw;
+            transform: translateY(-20vh);
+            font-family: 'roboto', sans-serif;
+            font-weight: 100;
+            text-shadow: 0px 1px 0px rgba(200,200,200,.8), 0px 2px 0px rgba(150,150,150,.5), 0px 3px 0px rgba(100,100,100,.2);
+         }
+
+         #navigator-headline.active{
+            font-size: 2vw;
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 10vw;
+            min-width: 20vw;
+            color: #FFF;
+            padding: 10px;
+            background-color: rgba(0,0,0,.5);
+            transform: translateY(0vh);
+            border-bottom: 2px solid;
+            
+            -webkit-transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -ms-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
          }
 
          .arrow{
@@ -276,15 +314,130 @@ h1, p, h2, h3, h4, ul, li, div {
              border-radius: 20%;
          }
 
-         .arrow:hover::before{
-             top : -.1vh;
+         .arrow.top::before{
+             border: .3vh solid #FFF;
+             top : .5vh;
+             border-bottom: none;
+             border-right: none;
          }
 
          /* sub : projects */
 
+         #projects .owl-carousel{
+             padding-top: 25vh;
+         }
 
+         #projects .project{
+            height : 50vh;
+         }
+
+         #projects .project-BG{
+             height: 100%;
+             background-size: cover;
+             background-position: center;
+             overflow: hidden;
+         }
+
+         #projects .project:hover .project-BG{
+             content : attr(data-name);
+             cursor: zoom-in;
+             filter: brightness(.25);
+
+             -webkit-transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -ms-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+         }
+
+         #projects .project span{
+             z-index: 1;
+             text-align: center;
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            COLOR: #fff;
+            font-size: 2vw;
+            text-shadow: 0px 0px 10px #333;
+            font-family: 'Open Sans', sans-serif;
+         }
+
+         #projects .project:hover span{
+             cursor : zoom-in;
+             opacity: 1;
+             -webkit-transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -ms-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+         }
 
          /* end sub : projects */
+
+        #projects .centered{
+            margin: 0 auto;
+            display: block;
+        }
+
+         /* sub : contact */
+
+        #contact .picto
+        {
+            width: 3.5vw;
+            background-size: contain;
+            padding: .5vw;
+            background: #FFF;
+            border-radius: 20%;
+        }
+
+        #contact .social-links
+        {
+            margin-left: 20vw;
+            vertical-align: middle;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #contact span.link{
+            position: relative;
+            color: #FFF;
+            margin: 5vh;
+            display: block;
+            flex-direction: column;
+            height: 5vh;
+            text-decoration: none;
+        }
+
+        #contact span.link a{
+            color : #FFF;
+            text-decoration: none;
+            margin-left: 1vw;
+            font-size: 1.5vw;
+            font-family: 'roboto', sans-serif;
+            font-weight: 100;
+            text-shadow: 0px 1px 0px rgba(200,200,200,.8), 0px 2px 0px rgba(150,150,150,.5), 0px 3px 0px rgba(100,100,100,.2);
+            -webkit-transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -ms-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+        }
+        #contact span.link a:hover{
+            color : #f50057;
+            text-shadow: 0px 0px 2px #f50057;
+        }
+
+        #contact span.link img{
+            vertical-align: middle;
+        }
+
+         /* end sub : contact */
 
     /* end All media */
 
@@ -296,10 +449,52 @@ h1, p, h2, h3, h4, ul, li, div {
             {
                 font-size : 8vw;
             }
+            #navigator-headline.active
+            {
+                font-size: 5vw;
+            }
+            #contact .social-links
+            {
+                margin-left: 5vw;
+            }
+            #contact .picto
+            {
+                width: 10vw;
+                padding: 1vw;
+            }
+            #contact span.link a
+            {
+                font-size: 5vw;
+            }
+        }
+        /* Tablet ----------- */
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            div.headline .coolIntro
+            {
+                font-size : 4vw;
+            }
+            #navigator-headline.active
+            {
+                font-size: 2.5vw;
+            }
+            #contact .social-links
+            {
+                margin-left: 10vw;
+            }
+            #contact .picto
+            {
+                width: 5vw;
+                padding: .75vw;
+            }
+            #contact span.link a
+            {
+                font-size: 2.5vw;
+            }
         }
         /* Desktops and laptops ----------- */
         @media only screen  and (min-width : 1024px) {
             .navigator{
+                min-width: 5vw;
                 z-index: 10;
                 height: 100vh;
                 position: fixed;
@@ -312,7 +507,10 @@ h1, p, h2, h3, h4, ul, li, div {
         }
         /* Large screens ----------- */
         @media only screen  and (min-width : 1824px) {
-            
+            #navigator-headline.active
+            {
+                font-size: 1.5vw;
+            }
         }
 
     /* end specific media fixes */

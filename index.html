@@ -3,13 +3,12 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Benjamin 'Tero' Pelmoine</title>
+    <title>Benjamin Pelmoine</title>
     <meta name="description" content="Game Programmer @ CNAM-ENJMIN, but also a cool guy making shaders and artsy's stuff" />
     <meta name="author" content="Benjamin Pelmoine" />
     <meta name="keywords" content="gamedev, glsl shader, ENJMIN, developer, game programmer, Benjamin Pelmoine, Pelmoine" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="css/terou.css">
-    <link rel="stylesheet" href="css/animate.css">
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
@@ -19,22 +18,23 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" />
     <!--<![endif]-->
 </head>
 
 <body class="stop-scrolling">
     <div id="loader"></div>
     <div class="navigator">
-        <a class="to-projects node active" href="#container"></a>
-        <a class="to-projects node" href="#projects"></a>
-        <a class="to-projects node"></a>
-        <a class="to-projects node"></a>
-        <a class="to-projects node"></a>
+        <a data-headline="" class="node-headline node active" href="#container"></a>
+        <a data-headline="Projects i've been working on" class="node-projects node" href="#projects"></a>
+        <a data-headline="Contact me" class="node-contact node" href="#contact"></a>
     </div>
+    <div id="navigator-headline"></div>
     <div id="container">
         <div class="headline">
             <div class="coolIntro">
-                <span class="hotpink">Benjamin Pelmoine,</span>
+                <span class="hotpink darkside">Benjamin Pelmoine,</span>
                 <span class="state"> game programmer</span>
             </div>
             <div class="parallax-window-header" data-parallax="scroll" data-image-src="files/pictures/benjamin-pelmoine-wata.jpg"></div>
@@ -42,18 +42,76 @@
         </div>
     </div>
     <div id="projects" class="section">
-        <div class="parallax-window" data-speed=".5" data-parallax="scroll" data-image-src="files/pictures/benjamin-pelmoine-brainstorm.jpg"></div>
+        <div class="parallax-window" data-speed=".5" data-parallax="scroll" data-image-src="files/pictures/benjamin-pelmoine-brainstorm.jpg">
+            <div class="pure-u-xl-2-3 pure-u-md-5-6 pure-u-sm-5-6 pure-u-xs-1 centered">
+                <div class="owl-carousel">
+                    <div class="project" data-content="projects/dejeunersurlherbe.html">
+                        <span>Déjeuner sur l'herbe</span>
+                        <div class="project-BG" data-image-src="files/pictures/projects/dejeunersurlherbe.png" >  
+                        </div>
+                    </div>
+                    <div class="project" data-content="projects/poulett.html">
+                        <span>Poulett</span>
+                        <div class="project-BG" data-image-src="files/pictures/projects/poulett.png" >  
+                        </div>
+                    </div>
+                    <div class="project" data-content="projects/udock.html">
+                        <span>Udock</span>
+                        <div class="project-BG" data-image-src="files/pictures/projects/udock.jpg" >  
+                        </div>
+                    </div>
+                    <div class="project" data-content="projects/rednut.html">
+                        <span>Red nut</span>
+                        <div class="project-BG" data-image-src="files/pictures/projects/rednut.png" >  
+                        </div>
+                    </div>
+                    <div class="project" data-content="projects/generativedoom">
+                        <span>Generative Doom</span>
+                        <div class="project-BG" data-image-src="files/pictures/projects/doomgeneration.png" >  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="arrow" href="#contact"></a>
+    </div>
+    <div id="contact" class="section">
+        <div class="parallax-window" data-speed=".5" data-parallax="scroll" data-image-src="files/pictures/benjamin-pelmoine-tower.jpg">
+        <div class="pure-g social-links">
+            <div class="pure-u-1">
+                <span class="link">
+                    <a href="mailto:contact@b-pelmoine.com"><img class="picto" src="files/pictures/picto/message.png" alt="Message icon"></a>
+                    <a href="mailto:contact@b-pelmoine.com">contact@b-pelmoine.com</a>
+                </span>
+            </div>
+            <div class="pure-u-1">
+                <span class="link">
+                    <a href="http://linkedin.com/in/b-pelmoine"><img class="picto" src="files/pictures/picto/linkedin.png" alt="Linkedin icon"></a>
+                    <a href="http://linkedin.com/in/b-pelmoine">/in/b-pelmoine</a>
+                </span>
+            </div>
+            <div class="pure-u-1">
+                <span class="link">
+                    <a href="http://artstation.com/artist/tero"><img class="picto" src="files/pictures/picto/artstation.png" alt="Artstation icon"></a>
+                    <a href="http://artstation.com/artist/tero">/artist/tero</a>
+                </span>
+            </div>
+            <div class="pure-u-1">
+                <span class="link">
+                    <a href="https://github.com/b-pelmoine"><img class="picto" src="files/pictures/picto/github.png" alt="Github icon"></a>
+                    <a href="https://github.com/b-pelmoine">/b-pelmoine</a>
+                </span>
+            </div>
+        </div>
+        </div>
+        <a class="arrow top" href="#container"></a>
     </div>
  </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/pace.min.js"></script>
-<script src="js/terou.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 <script src="js/parallax.min.js"></script>
-<script src="js/wow.min.js"></script>
-
-<script>
-    new WOW().init(); //wow <3
-</script>
+<script src="js/terou.js"></script>
 <script>
     (function (i, s, o, g, r, a, m) {
         i['GoogleAnalyticsObject'] = r;
@@ -69,7 +127,5 @@
 
     ga('create', 'UA-88562806-1', 'auto');
     ga('send', 'pageview');
-
 </script>
-
 </html>
