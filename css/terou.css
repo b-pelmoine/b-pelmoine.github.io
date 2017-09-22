@@ -345,7 +345,7 @@ a.link:hover::before
 
          #projects .owl-carousel{
              padding-top: 25vh;
-             touch-action: none;
+             touch-action: pan-y;
          }
 
          #projects .owl-carousel .owl-nav{
