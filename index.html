@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html prefix="og: http://ogp.me/ns#">
 
 <head>
     <meta charset="utf-8" />
@@ -8,7 +8,26 @@
     <meta name="author" content="Benjamin Pelmoine" />
     <meta name="keywords" content="gamedev, glsl shader, ENJMIN, developer, game programmer, Benjamin Pelmoine, Pelmoine" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="css/terou.css">
+    <meta property="og:title" content="Benjamin Pelmoine - Game Programmer" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.b-pelmoine.com/" />
+    <meta property="og:image" content="http://www.b-pelmoine.com/files/pictures/benjamin-pelmoine-character_design_challenge_robots.jpg" />
+    <meta property="og:image:width" content="1869" />
+    <meta property="og:image:height" content="975" />
+    <meta property="og:image:alt" content="Character design challenge's entry (robot theme) by Benjamin Pelmoine" />
+    <meta property="og:description" content="Game Programmer @ CNAM-ENJMIN, but also a cool guy making shaders and artsy's stuff" />
+    <!-- site css -->
+    <link rel="stylesheet" href="css/terou.min.css">
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88562806-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+
+    gtag('config', 'UA-88562806-1');
+    </script>
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
@@ -35,7 +54,7 @@
         <div class="headline">
             <div class="coolIntro">
                 <span class="hotpink darkside">Benjamin Pelmoine,</span>
-                <span class="state"> game programmer</span>
+                <span class="state"> </span>
             </div>
             <div class="parallax-window-header" data-parallax="scroll" data-image-src="files/pictures/benjamin-pelmoine-wata.jpg"></div>
         <a class="arrow" href="#projects"></a>
@@ -47,7 +66,7 @@
                 <div class="owl-carousel">
                     <div class="project" data-content="projects/dejeunersurlherbe.html">
                         <span>Déjeuner sur l'herbe</span>
-                        <div class="project-BG" data-image-src="files/pictures/projects/dejeunersurlherbe.png" >  
+                        <div class="project-BG" data-image-src="files/pictures/projects/dejeunersurlherbe.jpg" >  
                         </div>
                     </div>
                     <div class="project" data-content="projects/poulett.html">
@@ -121,21 +140,5 @@
 <script src="js/pace.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 <script src="js/parallax.min.js"></script>
-<script src="js/terou.js"></script>
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-88562806-1', 'auto');
-    ga('send', 'pageview');
-</script>
+<script src="js/terou.min.js"></script>
 </html>

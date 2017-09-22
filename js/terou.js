@@ -39,7 +39,7 @@ $(function() {
             States : ["Concept Artist","Bug Fixer","Shader Enthusiast", "Game Addict", "C++ Lover", "2D Artist", "Game Programmer"],
             stateIndex : 0,
             stateSelector : $("#container .headline .state"),
-            rollFrequency : 3000
+            rollFrequency : 2000
         }
         rollNewState(stateParams);
         setInterval(function(){rollNewState(stateParams)}, stateParams.rollFrequency);
@@ -55,7 +55,6 @@ $(function() {
     {
         loadproject($(this));
     })
-    
 
     //close project view (both)
     $('#project-view .close-project-view').click(function()
@@ -74,7 +73,7 @@ $(function() {
     responsiveClass:true,
     autoplayHoverPause:true,
     autoplay: true,
-    autoplayTimeout:1000,
+    autoplayTimeout:3000,
     nav: true,
     navText: ["",""],
     mouseDrag : false,
