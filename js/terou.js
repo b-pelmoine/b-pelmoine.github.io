@@ -28,6 +28,8 @@ var mobileModeEnabled = false;
 }).call(this);
 
 $(function() {
+    loadImgAsync(".project-BG", "image-src");
+
     Pace.on('done', function() {
         $("body").removeClass("stop-scrolling");
         setTimeout(function() {
@@ -43,7 +45,6 @@ $(function() {
         }
         rollNewState(stateParams);
         setInterval(function(){rollNewState(stateParams)}, stateParams.rollFrequency);
-        loadImgAsync(".project-BG", "image-src");
     });
 
     $(window).scroll(function (event) {
