@@ -15,6 +15,20 @@ h1, p, h2, h3, h4, ul, li, div {
   text-shadow: 0px 0px 2px #f50057;
 } 
 
+#footer{
+    text-align: center;
+    width : 100vw;
+    color : #FFF;
+    background: #111;
+    padding: 2vw;
+    font-size: 1em;
+}
+
+#footer a{
+    color : #f50057;
+    text-decoration: none;
+}
+
 a.link
 {
     position: relative;
@@ -200,6 +214,10 @@ a.link:hover::before
             display: table;
             font-family: 'Open Sans', sans-serif;
             color: transparent;
+        }
+
+        .pink{
+            font-weight: 700;
         }
 
         .darkside{
@@ -431,6 +449,19 @@ a.link:hover::before
 
          #projects .project{
             height : 50vh;
+            border-bottom: 1vh solid #f50057;
+         }
+        #projects .project:before{
+            content:"see project";
+            position: absolute;
+            z-index: 2;
+            padding: 1vh 1.5vw;
+            background: #111;
+            color: #f50057;
+            border-bottom-right-radius: 1vw;
+            cursor: pointer;
+            font-size: 1vw;
+            font-weight: 700;
          }
 
          #projects .project-BG{
@@ -700,11 +731,15 @@ a.link:hover::before
          /* end sub : contact */
 
     /* end All media */
+    
 
     /* specific media fixes */
 
         /* Smartphones (portrait) ----------- */
-        @media only screen and (max-width : 480px) {
+        @media only screen and (max-width : 768px) {
+            #projects .project:before{
+                font-size: 4vw;
+            }
             div.headline .coolIntro
             {
                 font-size : 8vw;
@@ -783,6 +818,9 @@ a.link:hover::before
         }
         /* Tablet ----------- */
         @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            #projects .project:before{
+                font-size: 2.5vw;
+            }
             div.headline .coolIntro
             {
                 font-size : 4vw;
@@ -816,7 +854,7 @@ a.link:hover::before
         /* Desktops and laptops ----------- */
         @media only screen  and (min-width : 1024px) {
             .navigator{
-                min-width: 5vw;
+                min-width: 10vw;
                 z-index: 10;
                 height: 25vh;
                 position: fixed;
@@ -826,6 +864,9 @@ a.link:hover::before
                 justify-content: top;
                 flex-direction: column;
                 padding-top: 2.5vh
+            }
+            #projects .project:before{
+                font-size: 1.5vw;
             }
 
             .project-title{
@@ -863,6 +904,9 @@ a.link:hover::before
         }
         /* Large screens ----------- */
         @media only screen  and (min-width : 1824px) {
+            #projects .project:before{
+                font-size: 1vw;
+            }
             #navigator-headline.active
             {
                 font-size: 1.5vw;
