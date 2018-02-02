@@ -38,7 +38,7 @@ $(function() {
         //nameChanger
         var stateParams = 
         {
-            States : ["Concept Artist","Bug Fixer","Shader Enthusiast", "Game Addict", "C++ Lover", "2D Artist", "Game Programmer"],
+            States : ["Gameplay Programmer", "UE4 Explorer", "Bug Fixer", "Shader Enthusiast", "Technical Artist", "Concept Artist", "Game Addict", "C++ Lover"],
             stateIndex : 0,
             stateSelector : $("#container .headline .state"),
             rollFrequency : 2000
@@ -141,7 +141,7 @@ function rollNewState(state)
     if(state.stateIndex >= state.States.length)
         state.stateIndex = 0;
 
-    var newState = state.States[state.stateIndex++].toLowerCase()
+    var newState = state.States[state.stateIndex++]//.toLowerCase()
     var i=0;
     var text = "";
     state.stateSelector.text(text);
