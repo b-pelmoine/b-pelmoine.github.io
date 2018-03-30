@@ -457,14 +457,13 @@ a.link:hover::before
 
          #projects .project{
             height : 50vh;
-            border-bottom: 1vh solid #f50057;
          }
         #projects .project:before{
             content:"see project";
             position: absolute;
             z-index: 2;
             padding: 1vh 1.2vw;
-            top : -5vh;
+            top : calc(-6vh);
             background: #111;
             color: #CCC;
             border-bottom: solid 2px #f50057;
@@ -487,14 +486,21 @@ a.link:hover::before
          }
 
          #projects .project-BG{
+            background-repeat: no-repeat;
              height: 100%;
              background-size: cover;
              background-position: center;
              overflow: hidden;
              filter: brightness(.75);
+
+             -webkit-transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -ms-transition: all 300ms ease;
+            -o-transition: all 300ms ease;
+            transition: all 300ms ease;
          }
 
-         #projects .project:hover .project-BG{
+         #projects .project .project-BG:hover{
              cursor: zoom-in;
              filter: brightness(.25);
 
@@ -507,17 +513,21 @@ a.link:hover::before
 
          #projects .project span{
             z-index: 1;
-            text-align: center;
-            opacity: 0;
+            opacity: 1;
             position: absolute;
-            left: 50%;
-            top: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+            transform-origin: center;
+            margin-left : auto;
+            margin-right: auto;
+            bottom: 0;
+            left : 0;
+            right: 0;
+            text-align: center;
             COLOR: #fff;
             font-size: 2vw;
             text-shadow: 0px 5px 5vw #000;
             font-family: 'Open Sans', sans-serif;
+            background: rgba(0,0,0,.5);
+            padding: 10px 5vw;
          }
 
          #projects .project:hover span{
@@ -730,7 +740,7 @@ a.link:hover::before
         #contact span.link a{
             color : #DDD;
             text-decoration: none;
-            margin-left: 1vw;
+            margin-left: 1vw; 
             font-size: 1.5vw;
             font-family: 'roboto', sans-serif;
             font-weight: 100;
@@ -783,7 +793,10 @@ a.link:hover::before
                 font-size: 5vw;
             }
             #projects .project:hover span{
-             opacity: 0;
+                opacity: 1;
+            }
+            #projects .project span{
+                font-size: 4vw;
             }
             #projects .project-BG:hover{
                 filter: brightness(.75);
@@ -864,7 +877,10 @@ a.link:hover::before
                 font-size: 2.5vw;
             }
             #projects .project:hover span{
-             opacity: 0;
+             opacity: 1;
+            }
+            #projects .project span{
+                font-size: 3vw;
             }
 
             #project-view a.redirect{
@@ -887,6 +903,10 @@ a.link:hover::before
                 padding-top: 2.5vh
             }
             #projects .project:before{
+                font-size: 1.5vw;
+            }
+
+            #projects .project span{
                 font-size: 1.5vw;
             }
 
@@ -928,6 +948,11 @@ a.link:hover::before
             #projects .project:before{
                 font-size: 1vw;
             }
+
+            #projects .project span{
+                font-size: 1.2vw;
+            }
+
             #navigator-headline.active
             {
                 font-size: 1.5vw;
