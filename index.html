@@ -18,15 +18,15 @@
     <meta property="og:image:alt" content="Character design challenge's entry (robot theme) by Benjamin Pelmoine" />
     <meta property="og:description" content="Game Programmer @ CNAM-ENJMIN, but also a cool guy making shaders and artsy's stuff" />
     <!-- site css -->
-    <link rel="stylesheet" href="css/terou.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88562806-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments)};
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+        gtag('js', new Date());
 
-    gtag('config', 'UA-88562806-1');
+        gtag('config', 'UA-88562806-1');
     </script>
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
@@ -46,115 +46,121 @@
     <div id="loader"></div>
     <div class="navigator">
         <a data-headline="" class="node-headline node active" href="#container"></a>
-        <a data-headline="Projects i've been working on" class="node-projects node" href="#projects"></a>
+        <a data-headline="Projects i've worked on" class="node-projects node" href="#projects"></a>
         <a data-headline="Contact me" class="node-contact node" href="#contact"></a>
     </div>
     <div id="navigator-headline"></div>
     <div id="container">
         <div class="headline">
             <div class="coolIntro">
-                <span class="hotpink darkside">Benjamin Pelmoine,</span>
+                <span class="thatsmyname">Benjamin Pelmoine,</span>
                 <span class="state"> </span>
             </div>
             <div class="parallax-window-header" data-parallax="scroll" data-image-src="files/pictures/benjamin-pelmoine-wata.jpg"></div>
-        <a class="arrow" href="#projects"></a>
+            <a class="arrow" href="#projects"></a>
         </div>
     </div>
-    <div id="projects" class="section">
-        <div class="project-section">
-            <div class="pure-u-xl-2-3 pure-u-md-5-6 pure-u-sm-5-6 pure-u-xs-1 centered">
-                <div class="owl-carousel">
-                    <div class="project" data-content="projects/dejeunersurlherbe.html">
-                        <span>Déjeuner sur l'herbe</span>
-                        <div class="project-BG" data-image-src="files/pictures/projects/dejeunersurlherbe.jpg" >  
-                        </div>
-                    </div>
-                    <div class="project" data-content="projects/aifighters.html">
-                        <span>AI Fighters</span>
-                        <div class="project-BG" data-image-src="files/pictures/projects/aifighters.jpg" >  
-                        </div>
-                    </div>
-                    <div class="project" data-content="projects/illtide.html">
-                        <span>Illtide</span>
-                        <div class="project-BG" data-image-src="files/pictures/projects/Illtide.jpg" >  
-                        </div>
-                    </div>
-                    <div class="project" data-content="projects/asteronautes.html">
-                        <span>Asteronautes 30K</span>
-                        <div class="project-BG" data-image-src="files/pictures/projects/asteronautes30k.jpg" >  
-                        </div>
-                    </div>
-                    <div class="project" data-content="projects/poulett.html">
-                        <span>Poulett</span>
-                        <div class="project-BG" data-image-src="files/pictures/projects/poulett.png" >  
-                        </div>
-                    </div>
-                    <div class="project" data-content="projects/udock.html">
-                        <span>Udock</span>
-                        <div class="project-BG" data-image-src="files/pictures/projects/udock.jpg" >  
-                        </div>
-                    </div>
-                    <div class="project" data-content="projects/rednut.html">
-                        <span>Red nut</span>
-                        <div class="project-BG" data-image-src="files/pictures/projects/rednut.png" >  
-                        </div>
-                    </div>
-                    <div class="project" data-content="projects/generativedoom.html">
-                        <span>Generative Doom</span>
-                        <div class="project-BG" data-image-src="files/pictures/projects/doomgeneration.png" >  
-                        </div>
-                    </div>
+    <section id="projects">
+        <div class="pure-g centered">
+            <div id="project-div-root">
+                <div class="project pure-u-md-1-4 pure-u-1-2 pure-u-lg-1-4" data-content="projects/dejeunersurlherbe.html">
+                    <span>Déjeuner sur l'herbe</span>
+                    <img class="project-BG pure-img" src="files/pictures/projects/Unity_Dejeuner-sur-l-herbe.jpg" />
+                </div>
+                <div class="project pure-u-md-1-4 pure-u-1-2 pure-u-lg-1-4" data-content="projects/aifighters.html">
+                    <span>AI Fighters</span>
+                    <img class="project-BG pure-img" src="files/pictures/projects/UE4_AIFighter.jpg" />
+                </div>
+                <div class="project pure-u-md-1-4 pure-u-1-2 pure-u-lg-1-4" data-content="projects/illtide.html">
+                    <span>Illtide</span>
+                    <img class="project-BG pure-img" src="files/pictures/projects/UE4_Illtide.jpg" />
+                </div>
+                <div class="project pure-u-md-1-4 pure-u-1-2 pure-u-lg-1-4" data-content="projects/asteronautes.html">
+                    <span>Asteronautes 30K</span>
+                    <img class="project-BG pure-img" src="files/pictures/projects/Unity_Asteronautes30k.jpg" />
+                </div>
+                <div class="project pure-u-md-1-4 pure-u-1-2 pure-u-lg-1-4" data-content="projects/poulett.html">
+                    <span>Poulett</span>
+                    <img class="project-BG pure-img" src="files/pictures/projects/Unity_Poulett.jpg" />
+                </div>
+                <div class="project pure-u-md-1-4 pure-u-1-2 pure-u-lg-1-4" data-content="projects/udock.html">
+                    <span>Udock</span>
+                    <img class="project-BG pure-img" src="files/pictures/projects/Cnam_Udock.jpg" />
+                </div>
+                <div class="project pure-u-md-1-4 pure-u-1-2 pure-u-lg-1-4" data-content="projects/rednut.html">
+                    <span>Rednut</span>
+                    <img class="project-BG pure-img" src="files/pictures/projects/Unity_Rednut.jpg" />
+                </div>
+                <div class="project pure-u-md-1-4 pure-u-1-2 pure-u-lg-1-4" data-content="projects/generativedoom.html">
+                    <span>Generative Doom</span>
+                    <img class="project-BG pure-img" src="files/pictures/projects/Tool_DoomBuilder.jpg" />
                 </div>
             </div>
         </div>
         <a class="arrow" href="#contact"></a>
+    </section>
     </div>
     <div id="project-view">
         <a class="close-project-view"></a>
         <div id="project-container" class="scrollable"></div>
     </div>
-    <div id="contact" class="section">
+    <section id="contact">
         <div class="parallax-window" data-speed=".5" data-parallax="scroll" data-image-src="files/pictures/benjamin-pelmoine-character_design_challenge_robots.jpg">
-        <div class="pure-g social-links">
-            <div class="pure-u-1">
-                <span class="link">
-                    <a href="mailto:contact@b-pelmoine.com"><img class="picto" src="files/pictures/picto/message.png" alt="Message icon"></a>
-                    <a href="mailto:contact@b-pelmoine.com">contact@b-pelmoine.com</a>
-                </span>
+            <div class="pure-g social-links">
+                <div class="pure-u-1">
+                    <span class="link">
+                        <a href="mailto:contact@b-pelmoine.com"><img class="picto" src="files/pictures/picto/message.png"
+                                alt="Message icon"></a>
+                        <a href="mailto:contact@b-pelmoine.com">contact@b-pelmoine.com</a>
+                    </span>
+                </div>
+                <div class="pure-u-1">
+                    <span class="link">
+                        <a href="http://linkedin.com/in/b-pelmoine" target="_blank"><img class="picto" src="files/pictures/picto/linkedin.png"
+                                alt="Linkedin icon"></a>
+                        <a href="http://linkedin.com/in/b-pelmoine" target="_blank">/in/b-pelmoine</a>
+                    </span>
+                </div>
+                <div class="pure-u-1">
+                    <span class="link">
+                        <a href="http://artstation.com/artist/tero" target="_blank"><img class="picto" src="files/pictures/picto/artstation.png"
+                                alt="Artstation icon"></a>
+                        <a href="http://artstation.com/artist/tero" target="_blank">/artist/tero</a>
+                    </span>
+                </div>
+                <div class="pure-u-1">
+                    <span class="link">
+                        <a href="https://github.com/b-pelmoine" target="_blank"><img class="picto" src="files/pictures/picto/github.png"
+                                alt="Github icon"></a>
+                        <a href="https://github.com/b-pelmoine" target="_blank">/b-pelmoine</a>
+                    </span>
+                </div>
+                <div class="pure-u-1">
+                    <span class="link">
+                        <a href="files/Resume/BenjaminPelmoine_Resume.pdf" download><img class="picto" src="files/pictures/picto/resume.png"
+                                alt="File icon"></a>
+                        <a href="files/Resume/BenjaminPelmoine_Resume.pdf" download>Download my Resume</a>
+                    </span>
+                </div>
             </div>
-            <div class="pure-u-1">
-                <span class="link">
-                    <a href="http://linkedin.com/in/b-pelmoine" target="_blank"><img class="picto" src="files/pictures/picto/linkedin.png" alt="Linkedin icon"></a>
-                    <a href="http://linkedin.com/in/b-pelmoine" target="_blank">/in/b-pelmoine</a>
-                </span>
-            </div>
-            <div class="pure-u-1">
-                <span class="link">
-                    <a href="http://artstation.com/artist/tero" target="_blank"><img class="picto" src="files/pictures/picto/artstation.png" alt="Artstation icon"></a>
-                    <a href="http://artstation.com/artist/tero" target="_blank">/artist/tero</a>
-                </span>
-            </div>
-            <div class="pure-u-1">
-                <span class="link">
-                    <a href="https://github.com/b-pelmoine" target="_blank"><img class="picto" src="files/pictures/picto/github.png" alt="Github icon"></a>
-                    <a href="https://github.com/b-pelmoine" target="_blank">/b-pelmoine</a>
-                </span>
-            </div>
-            <div class="pure-u-1">
-                <span class="link">
-                    <a href="files/Resume/BenjaminPelmoine_Resume.pdf" download><img class="picto" src="files/pictures/picto/resume.png" alt="File icon"></a>
-                    <a href="files/Resume/BenjaminPelmoine_Resume.pdf" download>Download my Resume</a>
-                </span>
-            </div>
-        </div>
         </div>
         <a class="arrow top" href="#container"></a>
-    </div>
-    <div id="footer">© 2018 <a class="pink" href="http://www.b-pelmoine.com/" target="_blank">Benjamin Pelmoine</a> - <a href="files/legal.json">Legal</a></div>
- </body>
+    </section>
+    <div id="footer">© 2018 <a class="pink" href="http://www.b-pelmoine.com/" target="_blank">Benjamin Pelmoine</a> -
+        <a href="files/legal.json">Legal</a></div>
+</body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+    window.paceOptions = {
+        ajax: false, // disabled
+        document: false, // disabled
+        eventLag: false, // disabled
+        restartOnPushState: false,
+        restartOnRequestAfter: false
+    };
+</script>
 <script src="js/pace.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 <script src="js/parallax.min.js"></script>
-<script src="js/terou.min.js"></script>
+<script src="js/terou.js"></script>
+
 </html>

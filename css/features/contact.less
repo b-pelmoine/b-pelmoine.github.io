@@ -1,0 +1,64 @@
+// main: ../main.less
+#contact {
+    .picto {
+        width: 3.5vw;
+        background-size: contain;
+        padding: .5vw;
+        background: @color-main;
+        border-radius: 20%;
+        @media only screen and (max-width: 768px) {
+            width: 10vw;
+            padding: 1vw;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            width: 5vw;
+            padding: .75vw;
+        }
+    }
+    .social-links {
+        margin-left: 20vw;
+        vertical-align: middle;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @media only screen and (max-width: 768px) {
+            margin-left: 5vw;
+        }
+    }
+    span.link {
+        position: relative;
+        color: @color-main;
+        margin: 3vh;
+        display: block;
+        flex-direction: column;
+        height: 5vh;
+        text-decoration: none;
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            margin-left: 10vw;
+        }
+        a {
+            color: darken(@color-main, 20%);
+            text-decoration: none;
+            margin-left: 1vw;
+            font-size: 1.5vw;
+            .font-secondary();
+            font-weight: 100;
+            .textShadow();
+            .transition();
+            &:hover {
+                color: @color-main;
+            }
+            @media only screen and (max-width: 768px) {
+                font-size: 5vw;
+            }
+            @media only screen and (min-width: 768px) and (max-width: 1024px) {
+                font-size: 2.5vw;
+            }
+        }
+        img {
+            vertical-align: middle;
+        }
+    }
+}

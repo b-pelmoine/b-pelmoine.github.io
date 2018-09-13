@@ -1,0 +1,186 @@
+//main: ../../main.less
+#project-view {
+    visibility: hidden;
+    display: none;
+    color: @color-main;
+    &.active {
+        visibility: visible;
+        display: block;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        #project-container {
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: @color-background;
+            z-index: 10;
+            position: relative;
+            overflow-y: scroll;
+            padding: 10vh 5vw;
+        }
+    }
+    a.close-project-view {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        width: 32px;
+        height: 32px;
+        opacity: 0.3;
+        z-index: 11;
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+        &:before,
+        &:after {
+            position: absolute;
+            left: 15px;
+            content: ' ';
+            height: 33px;
+            width: 2px;
+            background-color: @color-main;
+            z-index: 11;
+            transform: rotate(-45deg);
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+    }
+    .project-title {
+        font-size: 3vw;
+        margin-bottom: 1vh;
+        color: @color-highlight;
+        text-shadow: 0px 0px 1vw @color-background;
+        @media only screen and (max-width: 768px) {
+            font-size: 6vw;
+            margin-bottom: 1vh;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 2vw;
+            margin-bottom: 1vh;
+        }
+    }
+    .project-duration {
+        font-size: 1.8vw;
+        margin-bottom: 1vh;
+        @media only screen and (max-width: 768px) {
+            font-size: 4vw;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 1.5vw;
+        }
+    }
+    .project-description {
+        font-size: 2vw;
+        .font-secondary();
+        color: darken(@color-main, 20%);
+        @media only screen and (max-width: 768px) {
+            font-size: 4vw;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 1.5vw;
+        }
+    }
+    .team-header {
+        font-size: 2vw;
+        .font-secondary();
+        margin: 1vw 0;
+        @media only screen and (max-width: 768px) {
+            font-size: 5vw;
+            padding: 1vh 0;
+            margin-top: 3vh;
+            border-top: 1px solid @color-main;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 2vw;
+        }
+    }
+    ul.team-members {
+        li.member {
+            font-size: 1.5vw;
+            .font-secondary();
+            margin: 1vh 0;
+            margin-left: 5vw;
+            list-style: none;
+            @media only screen and (max-width: 768px) {
+                font-size: 4.5vw;
+            }
+            @media only screen and (min-width: 768px) {
+                font-size: 1.5vw;
+            }
+            a {
+                .transition();
+                color: darken(@color-main, 50%);
+                text-decoration: none;
+                &:hover {
+                    color: @color-highlight;
+                    cursor: pointer;
+                    .transition();
+                }
+            }
+        }
+        li.team-section {
+            font-size: 1.5vw;
+            .font-secondary();
+            margin-left: 0vw;
+            list-style: none;
+            @media only screen and (max-width: 768px) {
+                font-size: 4.5vw;
+            }
+            @media only screen and (min-width: 768px) {
+                font-size: 1.5vw;
+            }
+        }
+    }
+    div.tasks-header {
+        font-size: 2vw;
+        .font-secondary();
+        margin: 1vw 0;
+        list-style-type: '-';
+        @media only screen and (max-width: 768px) {
+            font-size: 5vw;
+            margin-top: 3vh;
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 2vw;
+        }
+    }
+    ul.tasks li.task {
+        font-size: 1.8vw;
+        .font-secondary();
+        margin-left: 2vw;
+        list-style-type: '-';
+        @media only screen and (max-width: 768px) {
+            font-size: 4vw;
+            margin: 0 5vw
+        }
+        @media only screen and (min-width: 768px) {
+            font-size: 1.5vw;
+        }
+    }
+    iframe {
+        position: relative;
+        margin: 5vh auto;
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+    a.redirect {
+        text-decoration: none;
+        color: @color-highlight;
+        font-size: 1.5vw;
+        padding-top: 5vh;
+        display: flex;
+        @media only screen and (max-width: 768px) {
+            font-size: 5vw;
+            padding-top: 5vh;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            font-size: 2vw;
+            padding-top: 3vh;
+        }
+    }
+}

@@ -4,7 +4,6 @@
     "Resources" : {
         "Pure.css" : "http://purecss.io/",
         "Parallax.js" : "http://pixelcog.github.io/parallax.js/",
-        "Owlcarousel2" : "https://owlcarousel2.github.io/OwlCarousel2/",
         "Pace.js" : "http://github.hubspot.com/pace/"
     }
 }
