@@ -111,7 +111,11 @@ span.state {
   font-size: 80%;
   font-family: 'roboto', sans-serif;
   font-weight: 100;
-  text-shadow: 0px 1px 0px rgba(230, 230, 230, 0.7), 0px 2px 0px rgba(166, 166, 166, 0.5), 0px 3px 0px rgba(102, 102, 102, 0.25);
+}
+@media only screen and (min-width: 768px) {
+  span.state {
+    text-shadow: 0px 1px 0px rgba(230, 230, 230, 0.7), 0px 2px 0px rgba(166, 166, 166, 0.5), 0px 3px 0px rgba(102, 102, 102, 0.25);
+  }
 }
 .parallax-window {
   height: 100vh;
@@ -171,7 +175,11 @@ span.state {
   transform: translateY(-20vh);
   font-family: 'roboto', sans-serif;
   font-weight: 100;
-  text-shadow: 0px 1px 0px rgba(230, 230, 230, 0.7), 0px 2px 0px rgba(166, 166, 166, 0.5), 0px 3px 0px rgba(102, 102, 102, 0.25);
+}
+@media only screen and (min-width: 768px) {
+  #navigator-headline {
+    text-shadow: 0px 1px 0px rgba(230, 230, 230, 0.7), 0px 2px 0px rgba(166, 166, 166, 0.5), 0px 3px 0px rgba(102, 102, 102, 0.25);
+  }
 }
 #navigator-headline.active {
   font-size: 2vw;
@@ -462,14 +470,14 @@ body.pace-done #loader::after {
     font-size: 4vw;
   }
 }
-@media only screen and (min-width: 768px) {
-  #projects .project:before {
-    font-size: 1.5vw;
-  }
-}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   #projects .project:before {
     font-size: 2.5vw;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #projects .project:before {
+    font-size: 1.5vw;
   }
 }
 @media only screen and (min-width: 1824px) {
@@ -534,14 +542,14 @@ body.pace-done #loader::after {
     font-size: 4vw;
   }
 }
-@media only screen and (min-width: 768px) {
-  #projects .project span {
-    font-size: 1.5vw;
-  }
-}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   #projects .project span {
-    font-size: 3vw;
+    font-size: 2vw;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #projects .project span {
+    font-size: 1.5vw;
   }
 }
 @media only screen and (min-width: 1824px) {
@@ -835,14 +843,18 @@ body.pace-done #loader::after {
   text-decoration: none;
   margin-left: 1vw;
   font-size: 1.5vw;
-  font-family: 'roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 100;
-  text-shadow: 0px 1px 0px rgba(230, 230, 230, 0.7), 0px 2px 0px rgba(166, 166, 166, 0.5), 0px 3px 0px rgba(102, 102, 102, 0.25);
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
   -ms-transition: all 300ms ease;
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
+}
+@media only screen and (min-width: 768px) {
+  #contact span.link a {
+    text-shadow: 0px 1px 0px rgba(230, 230, 230, 0.7), 0px 2px 0px rgba(166, 166, 166, 0.5), 0px 3px 0px rgba(102, 102, 102, 0.25);
+  }
 }
 #contact span.link a:hover {
   color: #fff;

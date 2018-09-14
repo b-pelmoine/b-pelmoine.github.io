@@ -28,23 +28,20 @@ var mobileModeEnabled = false;
 }).call(this);
 
 $(function () {
+    if($("body").hasClass("pace-done"))
+    {
+        StartWebsiteJSLogic();
+    }
+    else
+    {
+        Pace.on('done', function () {
+            StartWebsiteJSLogic();
+        });
 
-    Pace.on('done', function () {
-        $("body").removeClass("stop-scrolling");
-        setTimeout(function () {
-            $("#loader").fadeOut();
-        }, 500);
-        //nameChanger
-        var stateParams =
-        {
-            States: ["Gameplay Programmer", "UE4 Explorer", "Bug Fixer", "Shader Enthusiast", "Technical Artist", "Concept Artist", "Game Addict", "C++ Lover"],
-            stateIndex: 0,
-            stateSelector: $("#container .headline .state"),
-            rollFrequency: 2000
-        }
-        rollNewState(stateParams);
-        setInterval(function () { rollNewState(stateParams) }, stateParams.rollFrequency);
-    });
+        Pace.on('hide', function() {
+            window.Pace = null;
+        });
+    }
 
     $(window).scroll(function (event) {
         if (!mobileModeEnabled)
@@ -65,6 +62,24 @@ $(function () {
         }
     });
 });
+
+function StartWebsiteJSLogic()
+{
+    $("body").removeClass("stop-scrolling");
+    setTimeout(function () {
+        $("#loader").fadeOut();
+    }, 500);
+    //nameChanger
+    var stateParams =
+    {
+        States: ["Gameplay Programmer", "UE4 Explorer", "Bug Fixer", "Shader Enthusiast", "Technical Artist", "Concept Artist", "Game Addict", "C++ Lover"],
+        stateIndex: 0,
+        stateSelector: $("#container .headline .state"),
+        rollFrequency: 2000
+    }
+    rollNewState(stateParams);
+    setInterval(function () { rollNewState(stateParams) }, stateParams.rollFrequency);
+}
 
 function mobileOptiMode(state) {
     mobileModeEnabled = state;
