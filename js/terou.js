@@ -39,6 +39,7 @@ $(function () {
         });
 
         Pace.on('hide', function() {
+            Pace.Stop();
             window.Pace = null;
         });
     }
