@@ -2,8 +2,8 @@
     "Host" : "Github pages",
     "Author" : "PELMOINE Benjamin",
     "Resources" : {
-        "Pure.css" : "http://purecss.io/",
-        "Parallax.js" : "http://pixelcog.github.io/parallax.js/",
-        "Pace.js" : "http://github.hubspot.com/pace/"
+        "Pure.css" : "https://purecss.io/",
+        "Parallax.js" : "https://pixelcog.github.io/parallax.js/",
+        "Pace.js" : "https://codebyzach.github.io/pace/"
     }
 }
