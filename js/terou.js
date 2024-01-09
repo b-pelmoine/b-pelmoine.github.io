@@ -73,7 +73,7 @@ function StartWebsiteJSLogic()
     //nameChanger
     var stateParams =
     {
-        States: ["Gameplay Programmer", "UE4 Explorer", "Bug Fixer", "Shader Enthusiast", "Technical Artist", "Concept Artist", "Game Addict", "C++ Lover"],
+        States: ["gameplay programmer", "bug fixer", "C++ enthusiast", "advent of code survivor"],
         stateIndex: 0,
         stateSelector: $("#container .headline .state"),
         rollFrequency: 2000
