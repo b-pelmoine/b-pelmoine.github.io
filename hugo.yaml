@@ -1,0 +1,65 @@
+baseURL: https://www.b-pelmoine.com
+languageCode: en-us
+title: Benjamin Pelmoine
+theme: blowfish
+
+author: 
+  name: Benjamin Pelmoine
+  image: head-empty.gif
+  bio: ~
+  headline: Game Programmer and C++ lover
+  links:
+    - github: https://github.com/b-pelmoine/
+    - linkedin: https://www.linkedin.com/in/b-pelmoine/
+    - code: https://dev.b-pelmoine.com/
+    - image: https://www.artstation.com/tero/
+    - email: mailto:contact@b-pelmoine.com
+
+params:
+  # blowfish, avocado, fire, forest, princess, neon, bloody, terminal, marvel, noir, autumn, congo, slate 
+  colorScheme: noir 
+  defaultAppearance: dark
+  enableSearch: false
+  autoSwitchAppearance: false
+  disableImageZoom: true
+  header:
+    layout: fixed
+  footer:
+    autoSwitchAppearance: false
+    showThemeAttribution: false
+    showAppearanceSwitcher: false
+  defaultFeaturedImage: b-pelmoine.svg
+  homepage:
+    layout: background
+    homepageImage: benjamin-pelmoine.jpg
+    showRecent: true
+    showRecentItems: 6
+    cardView: true
+    showMoreLink: true
+    showMoreLinkDest: /projects/
+  article:
+    showDate: false
+    showAuthor: false
+    showHero: true
+    heroStyle: background
+    layoutBackgroundBlur: true
+    showReadingTime: false
+    showWordCount: false
+    showTaxonomies: true
+    layoutBackgroundHeaderSpace: false
+
+menu:
+  main:
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 10
+    - pre: github
+      name: Github
+      url: https://github.com/b-pelmoine/
+      weight: 20
+    - identifier: dev-blog
+      pre: code
+      name: Posts
+      url: https://dev.b-pelmoine.com/posts/
+      weight: 30
