@@ -9,8 +9,6 @@ featured: true
 
 ## `C# Generalist Programmer` & `Generalist Artist`
 
-## Teaser Trailer
-
 ![Scenario 1: Across columns](/projects/dejeuner_sur_l_herbe/illustration.jpg)
 
 > You play as two members of a cannibal tribe, living in Bibouh’s forest. Your village is hungry, and demands you to kill and bring back their lunch together, a grandma who produces Foie gras, without being noticed.
