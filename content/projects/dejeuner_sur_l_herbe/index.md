@@ -17,4 +17,4 @@ featured: true
 
 Created in 3 months for the first year of my master degree at [ENJMIN](https://enjmin.cnam.fr/enjmin/ecole-nationale-du-jeu-et-des-medias-interactifs-accueil-1126103.kjsp)
 
-{{< itchio 155875 >}}
+{{< itchio id="155875" dark="true" >}}

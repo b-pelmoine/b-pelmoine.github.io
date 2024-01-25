@@ -1,1 +1,5 @@
-<iframe width="552" frameborder="0" height="167" src="https://itch.io/embed/{{ .Get 0 }}/"></iframe>
+{{- $id := .Get "id" | default (.Get 0) -}}
+{{- $class := .Get "class" | default (.Get 1) -}}
+<div {{ with $class }}class="{{ . }}"{{ else }}style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"{{ end }}>
+  <iframe src="https://itch.io/embed/{{ $id }}{{ with .Get "dark" }}{{ if eq . "true" }}?dark=true{{ end }}{{ end }}" {{ if not $class }}style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;max-height: 167px; border:0;" {{ end }}></iframe>
+</div>

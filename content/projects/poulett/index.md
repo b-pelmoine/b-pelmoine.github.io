@@ -15,4 +15,4 @@ featured: true
 
 Created in 48h for the [Ludum Dare](https://ludumdare.com/) 37
 
-{{< itchio 105192 >}}
+{{< itchio id="105192" dark="true" >}}

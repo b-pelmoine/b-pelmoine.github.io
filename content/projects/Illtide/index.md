@@ -19,4 +19,4 @@ Their path will be strewn by extremely powerful creatures.
 
 Created in 5 months for the second year of Master degree at [ENJMIN](https://enjmin.cnam.fr/enjmin/ecole-nationale-du-jeu-et-des-medias-interactifs-accueil-1126103.kjsp)
 
-{{< itchio 228854 >}}
+{{< itchio id="228854" dark="true" >}}
